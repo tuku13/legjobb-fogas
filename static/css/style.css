@@ -1,0 +1,46 @@
+body {
+    background: #121212;
+}
+
+#searchbar-container {
+    height: 100%;
+}
+
+#inside-form-searchbar-container {
+    padding-top: 5px;
+    padding-bottom: 5px
+}
+
+.dark-grey {
+    background: #121212;
+}
+
+.no-border {
+    border-width: 0;
+}
+
+.show-border {
+    border: 2px solid red;
+}
+
+.title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 21px;
+    padding-top: 20px;
+    padding-left: calc(50% - 566px/2 + 152px);
+    color: rgba(255, 255, 255, 0.87);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    padding-left: calc(50% - 566px/2 + 152px);
+    color: rgba(255, 255, 255, 0.67);
+}
