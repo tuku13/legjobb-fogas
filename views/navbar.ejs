@@ -1,0 +1,37 @@
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper row" style="background: #393939">
+            <u class="col s3">
+                <a href="/" class="brand-logo" style="color: #2BBD7E;">Legjobb Fogás</a>
+            </u>
+
+            <div id="searchbar-container" class="col m6 .show-on-medium">
+                <form>
+                    <div id="inside-form-searchbar-container" class="input-field">
+                        <form method="get" action="/">
+                            <input id="search" name="search" type="search" style="background: #121212; color: white" required>
+                        </form>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+            </div>
+            <ul id="nav-mobile" class="right">
+                <% if(logged_in === true) {%>
+                    <li><a class="waves-effect waves-light btn" style="background: #0094CC" href="/my_ads">HIRDETÉSEIM</a></li>
+                    <li><a class="waves-effect waves-light btn" style="background: #0094CC" href="/profile">PROFIL</a></li>
+                    <li><a class="waves-effect waves-light btn" style="background: #C50E29" href="/logout">KILÉPÉS</a></li>
+                <%}%>
+                <% if(logged_in === undefined) {%>
+                    <li><a class="waves-effect waves-light btn" style="background: #0094CC" href="/register">Regisztráció</a></li>
+                    <li><a class="waves-effect waves-light btn" style="background: #0094CC" href="/login">Belépés</a></li>
+                <%}%>
+
+                    <% if (typeof error !== 'undefined') { %>
+                        <% alert(error); %>
+                    <% } %>
+
+            </ul>
+        </div>
+    </nav>
+</div>

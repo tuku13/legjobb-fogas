@@ -1,0 +1,78 @@
+<%- include('header') -%>
+<%- include('navbar') -%>
+
+<div class="row" style="padding-top: 30px">
+    <div class="col s1" style="height: 300px"></div>
+
+    <!--    hirdetés leírása-->
+    <div class="col s6">
+        <div class="col s1"></div>
+        <div class="col s10" style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), #121212; height: 100%">
+            <div style=" background: linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), #121212;" >
+                <div class="ad-container">
+                    <div class="ad-image">
+                        <img style="padding-top: 20px; padding-left: 20px" src="<%= ad.image%>">
+                    </div>
+                    <div class="ad-text">
+                        <p class="title"><%=ad.title%></p>
+                        <p class="description"><%= ad.address%>, <%= ad.price%> Ft</p>
+                        <div class="description"><textarea rows="20" class="invisible-textarea" style="overflow: auto" disabled><%=ad.description%></textarea></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s1"></div>
+    </div>
+
+    <!--    hirdetés adatai részletesen-->
+    <div class="col s4 row">
+        <div class="col s1"></div>
+        <div class="col s10" style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), #121212; height: 100%">
+            <p class="title" style="padding-left: 40px">Hirdetés Adatai</p>
+            <div class="row">
+                <div class="col s1"></div>
+                <div class="input-field col s10">
+                    <input id="advertiser-name" type="text" style="pointer-events:none;" class="description" value="<%= ad.advertiser.name %>">
+                    <label for="advertiser-name"> Hirdető neve </label>
+                </div>
+                <div class="col s1"></div>
+            </div>
+            <div class="row">
+                <div class="col s1"></div>
+                <div class="input-field col s10">
+                    <input id="address" type="text" style="pointer-events:none;" class="description" value="<%= ad.address %>">
+                    <label for="address">Cím</label>
+                </div>
+                <div class="col s1"></div>
+            </div>
+            <div class="row">
+                <div class="col s1"></div>
+                <div class="input-field col s10">
+                    <input id="phone-number" type="text" style="pointer-events:none;" class="description" value="<%= ad.advertiser.phone_number %>">
+                    <label for="phone-number">Telefon</label>
+                </div>
+                <div class="col s1"></div>
+            </div>
+            <div class="row">
+                <div class="col s1"></div>
+                <div class="input-field col s10">
+                    <input id="email" type="text" style="pointer-events:none;" class="validate description" value="<%= ad.advertiser.email %>">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col s1"></div>
+            </div>
+            <div class="row">
+                <div class="col s1"></div>
+                <div class="input-field col s10">
+                    <input id="price" type="text" style="pointer-events:none;" class="validate description" value="<%= ad.price %>">
+                    <label for="price">Ár (Ft)</label>
+                </div>
+                <div class="col s1"></div>
+            </div>
+        </div>
+        <div class="col s1"></div>
+    </div>
+
+    <div class="col s1"></div>
+</div>
+<%- include('footer') -%>

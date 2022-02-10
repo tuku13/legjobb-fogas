@@ -1,0 +1,71 @@
+<%- include('header') -%>
+<%- include('navbar') -%>
+
+<div class="container" style="width: 40%">
+    <ul class="collection no-border">
+        <li class="collection-item" style="background: #121212; border-width: 0">
+            <div class="row" style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), #121212;">
+                <form  method="post" action="/profile" class="col s8 offset-s2">
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <p class="col title">Profil szerkesztése</p>
+                        <div class="col s1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <div class="input-field col s10">
+                            <input id="name" name="name" type="text" class="validate description" value="<%=user.name%>" required>
+                            <label for="name">Név</label>
+                        </div>
+                        <div class="col s1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <div class="input-field col s10">
+                            <input id="email" name="email" type="email" class="validate description" value="<%=user.email%>" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col s1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <div class="input-field col s10">
+                            <input id="password" name="password" type="password" class="validate description" value="<%=user.password%>" required>
+                            <label for="password">Jelszó</label>
+                        </div>
+                        <div class="col s1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <div class="input-field col s10">
+                            <input id="password_again" name="password_again" type="password" class="validate description" value="<%=user.password%>" required>
+                            <label for="password_again">Jelszó újra</label>
+                        </div>
+                        <div class="col s1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <div class="input-field col s10">
+                            <input id="phone_number" name="phone_number" type="tel" class="validate description" value="<%=user.phone_number%>" required>
+                            <label for="phone_number">Telefonszám</label>
+                        </div>
+                        <div class="col s1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 center">
+                            <a class="waves-effect waves-light btn" style="background: #C50E29" href="/my_ads">MÉGSE</a>
+                        </div>
+                        <div class="col s6 center">
+                            <button type="submit" class="waves-effect waves-light btn" style="background: #0094CC">
+                                MENTÉS
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </li>
+    </ul>
+
+</div>
+
+<%- include('footer') -%>

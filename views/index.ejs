@@ -1,0 +1,35 @@
+<%- include('header') -%>
+<%- include('navbar') -%>
+
+<div class="container">
+
+    <ul class="collection no-border">
+
+        <% if (ads.length == 0) { %>
+            <div style="text-align: center; color: white">
+                <h1>Még senki sem hozott létre hirdetést.</h1>
+            </div>
+        <% } %>
+
+        <% for (key in ads) { const ad = ads[key]; %>
+        <li class="collection-item" style="background: #121212; border-width: 0">
+            <div style=" background: linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), #121212;" >
+                <div class="ad-container">
+                    <div class="ad-image">
+                        <img src="<%= ad.image%>">
+                    </div>
+                    <div class="ad-text">
+                        <p class="title"><%=ad.title%></p>
+                        <p class="description"><%= ad.address%>, <%= ad.price%> Ft</p>
+                        <div class="description"><textarea rows="5" class="invisible-textarea" disabled><%=(ad.description.length >= 200) ? ad.description.substr(0,200) + '...' : ad.description%></textarea></div>
+                        <div style="padding-bottom: 20px;"><a class="waves-effect waves-light btn right col" style="background: #2BBD7E; margin-right: 20px" href="/ads/<%= ad._id%>">RÉSZLETEK</a></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <% } %>
+
+    </ul>
+</div>
+
+<%- include('footer') -%>

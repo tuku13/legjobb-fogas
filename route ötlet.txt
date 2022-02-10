@@ -1,0 +1,23 @@
+GET /ads/:ad_id - hirdetés adatainak megtekintése
+
+GET /ads/:ad_id/edit - hirdetés szerkesztő nézet
+POST /ads/:ad_id/edit - elementi a POST-ban kapott hirdetést
+
+GET /ads/:ad_id/delete - törli az adott id-hez tartozó hirdetést
+
+GET /new - új hirdetés létrehozó oldal
+POST /new - POST-ban kapot hirdetést elmenti majd átirányítja hirdetéseim oldalra
+
+GET /profile - profil szerkesztő oldal HTML
+POST /profile - profil adatainak elmentése
+
+GET /my_ads - saját hirdetések megtekintése
+
+GET /login - bejelentkező oldal HTML
+POST /login - bejelentkező oldal HTML
+
+GET /register - regisztráló oldal HTML
+POST /register - új felhasználó létrehozása
+
+GET / - megjeleníti az összes hirdetést
+        ?search - hirdetés szűrő paraméter

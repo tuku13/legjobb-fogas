@@ -1,0 +1,74 @@
+<%- include('header') -%>
+<%- include('navbar') -%>
+
+<div class="container" style="width: 40%">
+    <ul class="collection no-border">
+        <li class="collection-item" style="background: #121212; border-width: 0">
+            <div class="row" style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), #121212;">
+                <form method="post" action="/new" encType="multipart/form-data" class="col s8 offset-s2">
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <p class="col title">Új hirdetés</p>
+                        <div class="col s1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <div class="input-field col s10">
+                            <input id="title" name="title" type="text" data-length="30" class="validate description">
+                            <label for="title">Áru neve</label>
+                        </div>
+                        <div class="col s1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <div class="input-field col s10">
+                            <textarea id="description" name="description" class="materialize-textarea description"></textarea>
+                            <label for="description">Leírás</label>
+                        </div>
+                        <div class="col s1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <div class="input-field col s6">
+                            <input id="address" name="address" type="text" class="validate description">
+                            <label for="address">Cím</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="price" name="price" type="number" class="validate description">
+                            <label for="price">Ár (Ft)</label>
+                        </div>
+                        <div class="col s1"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s1"></div>
+                            <div class="file-field input-field col s10">
+                                <div class="btn" style="background: #2BBD7E">
+                                    <span>KÉP</span>
+                                    <input type="file" name="image" >
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate description" type="text" readonly>
+                                </div>
+                            </div>
+                        <div class="col s1"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s6 center">
+                            <a class="waves-effect waves-light btn" style="background: #C50E29" href="/my_ads">MÉGSE</a>
+                        </div>
+                        <div class="col s6 center">
+                            <button type="submit" class="waves-effect waves-light btn" style="background: #0094CC" value="LÉTREHOZ">
+                                LÉTREHOZ
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<%- include('footer') -%>
